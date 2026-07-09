@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>To Our SIA Family Hero — A Farewell Short</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <canvas id="fx-canvas"></canvas>
+  <audio id="bg-music" preload="auto" loop>
+    <source src="assets/music/leaving-on-a-jet-plane.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============== START GATE ============== -->
+  <div id="start-gate">
+    <div class="start-card">
+      <span class="headset-icon">🎧</span>
+      <h1>A little something before Friday...</h1>
+      <p>Turn your sound on and settle in. This one's for you.</p>
+      <button class="btn-primary" id="btn-start">Press Play ▶</button>
+    </div>
+  </div>
+
+  <!-- ============== LOADER ============== -->
+  <div id="scene-loader">
+    <div class="loader-laptop">
+      <div class="loader-screen">
+        <div class="loader-content">
+          <div class="loader-badges">
+            <img src="assets/logos/sia-medical.png" alt="SIA Medical" onerror="this.style.display='none'">
+            <img src="assets/logos/sia-dental.png" alt="SIA Dental" onerror="this.style.display='none'">
+          </div>
+          <div class="loader-text">Connecting<span class="loader-dots"></span></div>
+          <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+      </div>
+      <div class="loader-base"></div>
+    </div>
+  </div>
+
+  <!-- ============== SCENES ============== -->
+  <div id="stage">
+
+    <!-- SCENE 1 : COZY HOME OFFICE -->
+    <section class="scene" id="scene-1" data-duration="9800">
+      <div class="scene-inner bg-office">
+        <div class="light-rays"></div>
+        <div class="office-window"></div>
+        <div class="window-sunbeam"></div>
+
+        <div class="shelf-unit">
+          <div class="shelf-books">
+            <div class="book" style="height:34px;background:#e07a5f;"></div>
+            <div class="book" style="height:40px;background:#3d5a80;"></div>
+            <div class="book" style="height:30px;background:#81b29a;"></div>
+            <div class="book" style="height:38px;background:#f2cc8f;"></div>
+            <div class="book" style="height:26px;background:#9c6644;"></div>
+            <div class="book" style="height:36px;background:#588157;"></div>
+          </div>
+          <div class="shelf-board"></div>
+        </div>
+
+        <div class="office-clock"><div class="hand hr"></div><div class="hand min"></div></div>
+        <div class="acrylic-sign">
+          <img src="assets/logos/sia-medical.png" alt="SIA Medical" onerror="this.style.display='none'">
+        </div>
+
+        <div class="office-plant"><div class="pot"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div></div>
+        <div class="office-floor"></div>
+
+        <div class="intro-card">
+          <div class="intro-name">This is <span class="accent">Kem</span> 💛</div>
+          <div class="intro-role">Remote Receptionist</div>
+        </div>
+
+        <div class="desk">
+          <div class="ring-light"><div class="ring"></div><div class="arm"></div></div>
+
+          <div class="monitor">
+            <div class="webcam"></div>
+            <div class="screen">
+              <div class="screen-glow"></div>
+              <div class="screen-logo"><img src="assets/logos/sia-medical-icon.png" alt="" onerror="this.style.display='none'"></div>
+            </div>
+            <div class="stand"></div>
+          </div>
+
+          <div class="headset-stand">
+            <div class="pole"></div>
+            <div class="cap"></div>
+            <div class="hung-headset"><div class="hband"></div><div class="hcup left"></div><div class="hcup right"></div></div>
+          </div>
+
+          <div class="monitor-2">
+            <div class="screen"><div class="screen-glow"></div></div>
+            <div class="stand"></div>
+          </div>
+
+          <div class="keyboard"></div>
+          <div class="mouse"></div>
+
+          <div class="laptop-side">
+            <div class="lid">
+              <div class="sticker"><img src="assets/logos/sia-medical-icon.png" alt="" onerror="this.style.display='none'"></div>
+            </div>
+            <div class="base"></div>
+          </div>
+
+          <div class="desk-lamp">
+            <div class="glow"></div>
+            <div class="shade"></div>
+            <div class="arm"></div>
+            <div class="base"></div>
+          </div>
+
+          <div class="family-frame"><div class="frame">👪</div><div class="stand"></div></div>
+
+          <div class="coffee-cup">
+            <div class="steam"></div><div class="steam"></div>
+            <div class="handle"></div>
+            <div class="cup"></div>
+            <div class="mug-logo"><img src="assets/logos/sia-medical-icon.png" alt="" onerror="this.style.display='none'"></div>
+          </div>
+
+          <div class="desk-phone">
+            <div class="ring-wave"></div>
+            <div class="ring-wave d2"></div>
+            <div class="handset"></div>
+            <div class="body"></div>
+          </div>
+        </div>
+
+        <div class="call-card" id="call-card">
+          <div class="call-icon">📞</div>
+          <div class="call-text">Incoming Call</div>
+          <div class="call-actions">
+            <div class="call-btn decline">✕</div>
+            <div class="call-btn accept">✓</div>
+          </div>
+        </div>
+
+        <div class="sticky-note n1">Ask about<br>referral!</div>
+        <div class="sticky-note n2">Team huddle<br>3pm ✓</div>
+
+        <div class="character">
+          <div class="char-rig">
+            <div class="hair-back"></div>
+            <div class="torso">
+              <div class="collar"><i></i></div>
+              <div class="logo-patch left"><img src="assets/logos/sia-medical-icon.png" alt="" onerror="this.style.display='none'"></div>
+              <div class="logo-patch right"><img src="assets/logos/sia-dental-icon.png" alt="" onerror="this.style.display='none'"></div>
+              <div class="arm left"></div>
+              <div class="arm right"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="head-wrap">
+              <div class="face-base"></div>
+              <div class="face-photo"></div>
+              <div class="hair-wisp top"></div>
+              <div class="hair-wisp side-left"></div>
+              <div class="hair-wisp side-right"></div>
+              <div class="blink" id="char-blink"></div>
+              <div class="headset">
+                <div class="band"></div>
+                <div class="cup left"></div>
+                <div class="cup right"></div>
+                <div class="mic-arm"></div>
+                <div class="mic-tip"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 2 : INCOMING CALLS -->
+    <section class="scene calls-scene" id="scene-2" data-duration="12500">
+      <div class="scene-inner bg-warm">
+        <div class="headline">
+          <div class="desk-sign" style="position:static; display:inline-block;">📞 Another day of making people smile</div>
+        </div>
+        <div class="bubble-field">
+          <div class="speech-bubble" data-t="900" style="top:14%; left:8%;"><span class="icon">☎️</span>Good morning! Thank you for calling SIA Medical.</div>
+          <div class="speech-bubble" data-t="3200" style="top:30%; right:6%;"><span class="icon">☎️</span>Booking confirmed!</div>
+          <div class="speech-bubble" data-t="5500" style="top:52%; left:10%;"><span class="icon">☎️</span>Happy to help!</div>
+          <div class="speech-bubble" data-t="7800" style="top:20%; left:38%;"><span class="icon">☎️</span>Have a lovely day!</div>
+        </div>
+        <div class="calls-counter">
+          <div class="label">Calls Answered</div>
+          <div class="value" id="calls-value">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3 : MESSAGES FROM YOUR SIA FAMILY -->
+    <section class="scene messages-scene" id="scene-3" data-duration="54000">
+      <div class="scene-inner bg-warm">
+        <div class="headline">
+          <div class="desk-sign" style="position:static; display:inline-block;">💌 Messages from your SIA Family ❤️</div>
+        </div>
+        <div class="msg-stack" id="msg-stack"></div>
+      </div>
+    </section>
+
+    <!-- SCENE 4 : CALENDAR FLIP -->
+    <section class="scene" id="scene-4" data-duration="11000">
+      <div class="scene-inner bg-warm" style="display:flex; align-items:center; justify-content:center;">
+        <div class="calendar">
+          <div class="calendar-ring"></div>
+          <div class="calendar-ring right"></div>
+          <div class="calendar-frame">
+            <div class="calendar-top" id="calendar-top">2024</div>
+            <div class="calendar-body" id="calendar-body"></div>
+          </div>
+          <div class="calendar-caption">Days. Weeks. Months. So many good ones. 🗓️</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 : GOLDEN SUNSET SHUTDOWN -->
+    <section class="scene" id="scene-5" data-duration="7200">
+      <div class="scene-inner bg-dusk">
+        <div class="window-sunbeam" style="opacity:.6;"></div>
+        <div class="office-window" style="opacity:.5;"></div>
+        <div class="monitor-off"></div>
+        <div class="laptop-close">
+          <div class="base"></div>
+          <div class="lid"></div>
+        </div>
+        <div class="dim-overlay"></div>
+        <div class="fade-caption">One last log-off...</div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 : TEAM PHOTO -->
+    <section class="scene" id="scene-6" data-duration="8600">
+      <div class="scene-inner bg-night" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px;">
+        <div class="photo-frame">
+          <img src="assets/images/team-photo.jpg" onerror="this.onerror=null;this.src='assets/images/kem.jpg';" alt="The SIA Medical team">
+        </div>
+        <div class="family-cluster">
+          <div class="fam-avatar" style="background-image:url('assets/images/edison.jpg')"></div>
+          <div class="fam-avatar" style="background-image:url('assets/images/shai.jpg')"></div>
+          <div class="fam-avatar big" style="background-image:url('assets/images/kem.jpg')"></div>
+          <div class="fam-avatar" style="background-image:url('assets/images/kate.jpg')"></div>
+          <div class="fam-avatar" style="background-image:url('assets/images/ericka.jpg')"></div>
+          <div class="fam-avatar" style="background-image:url('assets/images/shane.jpg')"></div>
+        </div>
+        <div class="photo-caption">Your SIA family 💛</div>
+      </div>
+    </section>
+
+    <!-- SCENE 7 : BIG THANK YOU -->
+    <section class="scene" id="scene-7" data-duration="8500">
+      <div class="scene-inner bg-warm" style="display:flex; align-items:center; justify-content:center;">
+        <div class="thankyou-text">
+          <h2 class="reveal" data-t="200">THANK YOU<br>for everything.</h2>
+          <p class="reveal" data-t="1800">You made every call,</p>
+          <p class="reveal" data-t="2900">every patient,</p>
+          <p class="reveal" data-t="4000">and every day</p>
+          <p class="reveal" data-t="5100">a little brighter.</p>
+          <span class="heart" data-t="6200">❤️</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 8 : FINAL -->
+    <section class="scene final-scene" id="scene-8" data-duration="0">
+      <div class="scene-inner bg-warm" style="display:flex; align-items:center; justify-content:center;">
+        <div class="thankyou-text">
+          <h2 class="reveal" data-t="200">We'll miss you.</h2>
+          <p class="reveal" data-t="1400">Good luck on your next adventure!</p>
+          <span class="heart" data-t="2400">❤️</span>
+          <div class="final-tagline reveal" data-t="3200">From your SIA Family</div>
+          <div class="final-hashtag reveal" data-t="4000">#EatChicken 🐔</div>
+          <div class="final-logos reveal" data-t="4800">
+            <img src="assets/logos/sia-medical.png" alt="SIA Medical" onerror="this.style.display='none'">
+            <img src="assets/logos/sia-dental.png" alt="SIA Dental" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============== CONTROLS ============== -->
+  <div id="controls">
+    <button class="ctrl-btn" id="btn-replay" title="Replay">↺</button>
+    <div class="progress-dots" id="progress-dots"></div>
+    <button class="ctrl-btn" id="btn-skip" title="Skip scene">⏭</button>
+    <button class="ctrl-btn" id="btn-mute" title="Mute">🔊</button>
+    <button class="ctrl-btn" id="btn-fullscreen" title="Fullscreen">⛶</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
